@@ -1,0 +1,43 @@
+@use "../../../src/assets/palette";
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Slab&display=swap");
+.App {
+    &__update {
+        width: 920px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        &__text {
+            width: 600px;
+            height: 2em;
+            font-size: 20px;
+        }
+        &__buttons {
+            width: 320px;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            &__update {
+                background-color: palette.$update;
+                &:hover {
+                    background-color: palette.$update-hover;
+                }
+                &:active {
+                    background-color: palette.$update-click;
+                    color: white;
+                }
+            }
+            &__cancel {
+                background-color: palette.$cancel;
+                &:hover {
+                    background-color: palette.$cancel-hover;
+                }
+                &:active {
+                    background-color: palette.$cancel-click;
+                    color: white;
+                }
+            }
+        }
+    }
+}

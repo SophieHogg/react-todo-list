@@ -1,0 +1,48 @@
+@use "../../../src/assets/palette";
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Slab&display=swap");
+
+.App__taskList {
+    background-color: palette.$task-item;
+    border-radius: 5px;
+    font-size: 23px;
+    text-align: left;
+    margin: 10px;
+    padding: 20px 20px 20px 20px;
+    width: 600px;
+    min-height: 70px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__task {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &__text {
+            flex: 1;
+        }
+        &__completed {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+
+        &__empty {
+            font-size: 20px;
+            font-family: "Roboto Slab", serif;
+        }
+    }
+    &__iconWrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &__icon {
+            margin: 0px 10px;
+            color: palette.$icon-colour;
+            font-size: 27px;
+            &:hover {
+                color: palette.$icon-hover;
+                cursor: pointer;
+            }
+        }
+    }
+}
